@@ -42,8 +42,8 @@ const servicesData = [
 
 const Services = () => {
     return (
-        <Container className='services-container'>
-            <h2>Naše služby</h2>
+        <Container className='services-container' fluid>
+            {/* <h2>Naše služby</h2> */}
             <Row className='justify-content-center'>
                 {servicesData.map((service) => (
                     <Col key={service.id} md={6} lg={4} className="mb-4">

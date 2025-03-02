@@ -2,11 +2,11 @@ import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const NavigationBar = () => {
     return (
         <Navbar bg="light" variant="light" expand="lg">
             <Container>
-                <Navbar.Brand as={Link} to="/">🏗 I+I Housing</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/">🏗 Housing</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="ms-auto">
@@ -21,4 +21,4 @@ const Header = () => {
     );
 };
 
-export default Header;
+export default NavigationBar;
