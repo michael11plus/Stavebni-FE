@@ -71,6 +71,7 @@
 }
 
 .about-container {
+    padding: 40px 0;
     border-top: solid #777 0.5px;
     p {
         margin-top: 28px;
@@ -117,17 +118,18 @@
 .contact-buttons {
     display: flex;
     justify-content: center;
-    gap: 80px;
+    gap: 20%;
 }
 
 .useful-links {
     text-decoration: none;
     color: black;
+    display: inline-block;
     transition: transform 0.2s ease-in-out;
 }
 
 .useful-links:hover {
-    transform: scale(1.05);
+    transform: scale(1.10);
 }
 
 .footer-foot {
