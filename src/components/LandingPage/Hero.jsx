@@ -44,7 +44,7 @@ const Hero = () => {
 
     return (
         <Container ref={heroRef} className='hero d-flex justify-content-center align-items-center flex-column p-0' fluid>
-            <Row className='base-width d-flex justify-content-center align-items-center p-0'>
+            <Row className='base-width d-flex justify-content-center align-items-center'>
                 <Row className='p-0 m-0'>
                     <Col ref={titleRef} className={`hero-title p-0 ${titleHit ? 'a--fade-in-move-right' : 'opacity-0'}`} xs={6}>
                         Our goal is to deliver exceptional returns for our investors by executing high-quality flat renovation projects that enhance property value and appeal.
