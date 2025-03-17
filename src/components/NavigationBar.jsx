@@ -23,7 +23,7 @@ const NavigationBar = ({
         };
     }, []);
     return (
-        <Navbar className={`navbar d-flex align-items-center justify-content-center ${scrolled ? 'navbar--layer' : ''} ${navbarStyle === 'white' ? 'navbar--white' :  ''}`} expand="md">
+        <Navbar className={`navbar d-flex align-items-center justify-content-center ${scrolled ? 'navbar--layer' : ''} ${navbarStyle === 'black' ? 'bg-black' :  ''}`} expand="md">
             <Container fluid className='base-width p-0'>
                 <Navbar.Brand as={Link} to="/">🏗 Housing</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />

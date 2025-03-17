@@ -13,11 +13,6 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
 }
 
-.navbar--white {
-    color: black;
-    background-color: white;
-} 
-
 .navbar .navbar-brand,
 .navbar .nav-link {
     color: white !important; /* Apply white color to text */
