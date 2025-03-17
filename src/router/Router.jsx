@@ -10,13 +10,10 @@ const Router = () => {
 
      React.useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY >= heroRef.current.offsetTop - 72)
-                setNavbarStyle('white');
-            console.log(window.scrollY, 'scrollY');
-            if (servicesRef.current) {
-                // if(window.scrollY >= serviceRect.top)
-            }
-
+            if (window.scrollY >= servicesRef.current.offsetTop - 72)
+                setNavbarStyle('black');
+            else
+                setNavbarStyle('');
         };
 
         window.addEventListener("scroll", handleScroll);
