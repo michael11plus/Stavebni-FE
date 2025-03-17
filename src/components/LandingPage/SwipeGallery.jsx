@@ -8,7 +8,7 @@ import { kitchen_1, kitchen_2 } from '../../assets';
 const SwipeGallery = () => {
     return (
         <>
-            <Carousel  controls={false} interval={3000} style={{ background: 'rgba(0, 0, 0, 0.5)' }}>
+            <Carousel  controls={false} interval={2000} style={{ background: 'rgba(0, 0, 0, 0.5)' }}>
                     <Carousel.Item className='position-relative'>
                         <img className='w-100 flipped-image' src={kitchen_1} alt="Mordern kitchen 1" />
                         <div className='layer'></div>
