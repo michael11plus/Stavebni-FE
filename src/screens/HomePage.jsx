@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { SwipeGallery, Hero } from "../components";
 import Services from "../components/Body/Services";
 import About from "../components/Body/About";
@@ -7,12 +7,16 @@ import "../styles/styles.css";
 import { Container } from "react-bootstrap";
 
 
-const HomePage = () => {
+const HomePage = ({
+    heroRef,
+    servicesRef,
+}) => {
+
     return (
         <Container fluid className="p-0">
             <SwipeGallery />
-            <Hero />
-            <Services />
+            <Hero heroRef={heroRef} />
+            <Services servicesRef={servicesRef} />
             <About />
             <ContactForm />
         </Container>

@@ -3,20 +3,21 @@ import { Container, Card } from 'react-bootstrap';
 import "../../styles/styles.css";
 import { servicesData } from '../../utils/mockupData';
 
-const Services = () => {
+const Services = ({
+    servicesRef
+}) => {
     const [showServices, setShowServices] = useState(false);
-    const componentRef = React.useRef(null);
     const showServicesHandler = () => {
         setShowServices((prev) => {
             if (prev) {
-                componentRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
+                servicesRef.current?.scrollIntoView({ behavior: "smooth", block: "start" });
             }
             return !prev;
         });
     };
 
     return (
-        <Container ref={componentRef} className='services-container' fluid>
+        <Container ref={servicesRef} className='services-container' fluid>
             <div className='justify-content-center base-width service-grid'>
                 {servicesData.map((service, index) => {
                     if (index > 2 && !showServices)

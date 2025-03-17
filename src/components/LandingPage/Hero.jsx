@@ -4,10 +4,11 @@ import "../../styles/animations.css";
 import "../../styles/landing-page.css";
 import { Col, Container, Row } from 'react-bootstrap';
 
-const Hero = () => {
+const Hero = ({
+    heroRef
+}) => {
     const titleRef = useRef(null);
     const subtitleRef = useRef(null);
-    const heroRef = useRef(null);
 
     const [titleHit, setTitleHit] = useState(false);
     const [subtitleHit, setSubtitleHit] = useState(false);
