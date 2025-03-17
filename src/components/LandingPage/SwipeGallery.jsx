@@ -13,7 +13,7 @@ const SwipeGallery = () => {
                         <img className='w-100 flipped-image' src={kitchen_1} alt="Mordern kitchen 1" />
                         <div className='layer'></div>
                         <Carousel.Caption className='d-flex flex-column justify-content-center position-absolute a--fade-in-move-up'>
-                            <Container fluid className='base-width d-flex flex-column align-items-center align-items-md-start p-0'>
+                            <Container fluid className='base-width d-flex flex-column align-items-center align-items-md-start'>
                                 <h3 className=''>Náš poslední projekt</h3>
                                 <p className=''>Tento projekt je realizován ve spolupráci s xyz.cz</p>
                                 <button className="button--white">
@@ -26,7 +26,7 @@ const SwipeGallery = () => {
                     <img className='w-100 flipped-image' src={kitchen_2} alt="Mordern kitchen 2" />
                     <div className='layer'></div>
                     <Carousel.Caption className='d-flex flex-column justify-content-center position-absolute'>
-                        <Container fluid className='base-width d-flex flex-column align-items-center align-items-md-start p-0'>
+                        <Container fluid className='base-width d-flex flex-column align-items-center align-items-md-start'>
                             <h3>Náš poslední projekt</h3>
                             <p>Tento projekt je realizován ve spolupráci s xyz.cz</p>
                             <button className="button--white">
