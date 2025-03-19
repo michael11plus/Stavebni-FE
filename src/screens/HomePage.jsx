@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { SwipeGallery, Hero } from "../components";
-import Services from "../components/Body/Services";
+import { Services, Form } from "../components";
 import About from "../components/Body/About";
 import ContactForm from "../components/Body/ContactForm";
 import "../styles/styles.css";
@@ -17,6 +17,7 @@ const HomePage = ({
             <SwipeGallery />
             <Hero heroRef={heroRef} />
             <Services servicesRef={servicesRef} />
+            <Form />
             <About />
             <ContactForm />
         </Container>

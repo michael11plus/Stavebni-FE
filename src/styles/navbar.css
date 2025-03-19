@@ -13,9 +13,23 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
 }
 
+.navbar--black {
+    background-color: rgba(1, 1, 1, 0.9) !important;
+} 
+
 .navbar .navbar-brand,
 .navbar .nav-link {
     color: white !important; /* Apply white color to text */
+}
+
+.navbar-toggler {
+    border: none !important;
+    outline: none !important;
+}
+
+.navbar-toggler:focus, 
+.navbar-toggler:active {
+    box-shadow: none !important;
 }
 
 .nav-link {

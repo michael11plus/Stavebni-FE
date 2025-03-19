@@ -3,6 +3,7 @@ import kitchen_2 from './kitchen-2.jpg';
 import reconstruct_house from './reconstruct-house.jpeg';
 import reconstruct_flat from './reconstruct-flat.jpeg';
 import reconstruct_spaces from './reconstruct-spaces.jpeg';
+import airplane from './airplane.png';
 
 
 export {
@@ -10,5 +11,6 @@ export {
     kitchen_2,
     reconstruct_house,
     reconstruct_flat,
-    reconstruct_spaces
+    reconstruct_spaces,
+    airplane,
 };

@@ -20,7 +20,7 @@ const Hero = ({
         const handleScroll = () => {
             if (titleRef.current) {
                 const titleRect = titleRef.current.getBoundingClientRect();
-                if (titleRect.bottom <= window.innerHeight) {
+                if (titleRect.top <= window.innerHeight) {
                     setTitleHit(true);
                 }
                 if (titleRect.top < 0)
@@ -29,7 +29,7 @@ const Hero = ({
 
             if (subtitleRef.current) {
                 const subtitleRect = subtitleRef.current.getBoundingClientRect();
-                if (subtitleRect.bottom <= window.innerHeight) {
+                if (subtitleRect.top + 100 <= window.innerHeight) {
                     setSubtitleHit(true);
                 }
 
@@ -44,7 +44,7 @@ const Hero = ({
     }, []);
 
     return (
-        <Container ref={heroRef} className='hero d-flex justify-content-center align-items-center flex-column' fluid>
+        <Container ref={heroRef} className='hero section d-flex justify-content-center align-items-center flex-column' fluid>
             <Row className='p-0 base-width d-flex justify-content-center align-items-center'>
                 <Row className='p-0'>
                     <Col ref={titleRef} className={`hero-title p-0 ${titleHit ? 'a--fade-in-move-right' : 'opacity-0'}`} xs={6}>

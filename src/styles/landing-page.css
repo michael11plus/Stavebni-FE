@@ -1,8 +1,7 @@
 .hero {
     background-color: black;
     color: white;
-    padding: 160px 24px !important;
-    
+
     .hero-title {
         font-size: 2rem !important;
         font-weight: 300 !important;
@@ -11,5 +10,96 @@
     .hero-subtitle {
         font-size: 1.25rem !important;
         font-weight: 300 !important;
+    }
+}
+
+.form {
+    background: black;
+    min-height: 300px;
+    > .row {
+        border-radius: 12px !important;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    }
+    .form-container--right-bottom,
+    .form-container--left-top {
+        padding: 48px !important;
+    }
+}
+
+.form-submit {
+    animation: send-animation 1s ease-out;
+}
+
+.form--header-text {
+    font-size: 32px;
+    font-weight: 300;
+}
+
+.form--conditions-agreement-text {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* SERVICES */
+
+.services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr) !important; /* 3 equal-width columns */
+    gap: 16px !important; /* Space between columns */
+    margin: 0 !important; /* Ensure no extra margin */
+    padding: 0; /* Ensure no extra padding */
+    width: 100%; /* Make sure it takes full width */
+}
+
+.service-grid > * {
+    width: 100%;
+}
+
+.service-card {
+    text-align: center;
+    border: none !important;
+    cursor: pointer;
+}
+
+.service-title {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.service-image {
+    object-fit: cover !important;
+    height: 320px;
+}
+
+
+@media (min-width: 768px) { /* Medium screens (md) */
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr) !important; /* 2 columns */
+    }
+}
+
+@media (min-width: 992px) { /* Large screens (lg) */
+    .service-grid {
+        grid-template-columns: repeat(3, 1fr) !important; /* 3 columns */
+    }
+}
+
+/* FORM */
+
+@keyframes send-animation {
+    0% {
+        opacity: 0;
+        left: -200px;
+    }
+
+    100% {
+        opacity: 1;
+        left: 240px;
     }
 }

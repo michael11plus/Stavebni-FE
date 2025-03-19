@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../styles/navbar.css';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 const NavigationBar = ({
     navbarStyle
 }) => {
-    const [scrolled, setScrolled] = React.useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     React.useEffect(() => {
         const handleScroll = () => {
@@ -23,7 +23,7 @@ const NavigationBar = ({
         };
     }, []);
     return (
-        <Navbar className={`navbar d-flex align-items-center justify-content-center ${scrolled ? 'navbar--layer' : ''} ${navbarStyle === 'black' ? 'bg-black' :  ''}`} expand="md">
+        <Navbar className={`navbar d-flex align-items-center justify-content-center ${scrolled ? 'navbar--layer' : ''} ${navbarStyle === 'black' ? 'navbar--black' :  ''}`} expand="md">
             <Container fluid className='base-width p-0'>
                 <Navbar.Brand as={Link} to="/">🏗 Housing</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
