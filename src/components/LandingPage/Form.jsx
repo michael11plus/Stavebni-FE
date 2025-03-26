@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import '../../styles/landing-page.css';
+import '../../styles/animations.css';
 import { Col, Container, Row } from 'react-bootstrap';
 import { OutlinedInput, FormControl, InputLabel, FormHelperText, TextField, FormControlLabel, Checkbox, Divider, Typography } from '@mui/material';
 import { airplane } from '../../assets';
@@ -7,7 +8,8 @@ import { airplane } from '../../assets';
 const Form = () => {
     const [emailError, setEmailError] = useState(false);
     const [sendFormAnimation, setSendFormAnimation] = useState(false);
-    const [animationEnd, setAnimationEnd] = useState(false);
+    const [formHit, setFormHit] = useState(true);
+    const formRef = useRef(null);
 
     const nameRef = useRef(null);
     const lastNameRef = useRef(null);
@@ -28,13 +30,11 @@ const Form = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Access values from refs
         const name = nameRef.current.value;
         const lastName = lastNameRef.current.value;
         const phone = telRef.current.value;
         const email = emailRef.current.value;
 
-        // Log the data (or handle it as needed)
         console.log('Form submitted with:', {
             name,
             lastName,
@@ -42,7 +42,6 @@ const Form = () => {
             email,
         });
 
-        // You can now process the form data or send it to an API
     };
 
     const handleAnimationEnd = (e) => {
@@ -51,9 +50,27 @@ const Form = () => {
         }
     };
 
+    React.useEffect(() => {
+        const handleScroll = () => {
+            if (formRef.current) {
+                const servicesRect = formRef.current.getBoundingClientRect();
+                if (servicesRect.top + 120 <= window.innerHeight) {
+                    setFormHit(true);
+                }
+                else
+                    setFormHit(false);
+            }
+
+        };
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);   
+        }
+    }, []);
+
     return (
-        <Container className='section form' fluid>
-            <Row className='bg-white base-width'>
+        <Container ref={formRef} className='section form' fluid>
+            <Row className={`bg-white base-width ${formHit ? 'a--fade-in-move-up' : 'opacity-0'}`}>
                 <Col xs={12} md={5} className='form-container--right-bottom'>
                     <form className='d-flex flex-column justify-content-center align-items-center' onSubmit={handleSubmit}>
                         <p className='form--header-text mb-5'>
@@ -162,8 +179,13 @@ const Form = () => {
                 <Col className='py-4 d-flex'>
                     <Divider orientation="vertical" />
                 </Col>
-                <Col xs={12} md={6} className='form-container--left-top'>
-                    text
+                <Col xs={12} md={6} className='form-container--left-top d-none d-md-flex flex-md-column align-items-center'>
+                    <p className='form--header-text mb-5' style={{fontWeight: '400'}}>
+                        Konzultace zdarma
+                    </p>
+                    <p style={{fontSize: '1.5rem', fontWeight: '300'}}>
+                        Ať už máte otázky, potřebujete radu, nebo si chcete promluvit o svém projektu, náš tým je připraven vás podpořit – bez jakýchkoli závazků.
+                    </p>
                 </Col>
             </Row>
         </Container>

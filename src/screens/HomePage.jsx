@@ -18,8 +18,7 @@ const HomePage = ({
             <Hero heroRef={heroRef} />
             <Services servicesRef={servicesRef} />
             <Form />
-            <About />
-            <ContactForm />
+            {/* <About /> */}
         </Container>
     )
 }

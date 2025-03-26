@@ -4,6 +4,8 @@ import reconstruct_house from './reconstruct-house.jpeg';
 import reconstruct_flat from './reconstruct-flat.jpeg';
 import reconstruct_spaces from './reconstruct-spaces.jpeg';
 import airplane from './airplane.png';
+import instagramIcon from './instagram.png'
+import facebookIcon from './facebook.png'
 
 
 export {
@@ -13,4 +15,6 @@ export {
     reconstruct_flat,
     reconstruct_spaces,
     airplane,
+    instagramIcon,
+    facebookIcon
 };

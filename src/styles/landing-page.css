@@ -5,11 +5,15 @@
     .hero-title {
         font-size: 2rem !important;
         font-weight: 300 !important;
+        opacity: 0;
+        transition: 1s;
     }
     
     .hero-subtitle {
         font-size: 1.25rem !important;
         font-weight: 300 !important;
+        opacity: 0;
+        transition: opacity 1s;
     }
 }
 
@@ -20,9 +24,10 @@
         border-radius: 12px !important;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
-    .form-container--right-bottom,
-    .form-container--left-top {
-        padding: 48px !important;
+
+    .form-container--left-top,
+    .form-container--right-bottom {
+        padding-top: 48px !important;
     }
 }
 
@@ -81,6 +86,11 @@
 @media (min-width: 768px) { /* Medium screens (md) */
     .service-grid {
         grid-template-columns: repeat(2, 1fr) !important; /* 2 columns */
+    }
+
+    .form-container--left-top,
+    .form-container--right-bottom {
+        padding: 48px !important;
     }
 }
 

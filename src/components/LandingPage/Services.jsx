@@ -27,6 +27,8 @@ const Services = ({
                 if (servicesRect.top + 120 <= window.innerHeight) {
                     setServiceHit(true);
                 }
+                else
+                    setServiceHit(false);
             }
 
         };
@@ -59,7 +61,6 @@ const Services = ({
                                     <img src={service.img} className='service-image'/>
                                 </Card>
                                 <p className="service-title mt-3">{service.title}</p>
-                                {/* <p className="service-caption">{service.caption}</p> */}
                             </div>
                         )
                 })}

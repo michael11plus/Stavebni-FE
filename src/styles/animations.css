@@ -24,7 +24,11 @@
 }
 
 .a--fade-in-move-right {
-  animation: fade-in-move-right 1s ease-in-out !important;
+  animation: fade-in-move-right 1s ease-in-out forwards !important;
+}
+
+.a--fade-in-move-right__reverse {
+  animation: fade-in-move-right 1s reverse ease-in-out !important;
 }
 
 @keyframes fade-in-move-left {
@@ -38,5 +42,9 @@
 }
 
 .a--fade-in-move-left {
-  animation: fade-in-move-left 1s ease-in-out !important;
+  animation: fade-in-move-left 1s ease-in-out forwards !important;
+}
+
+.a--fade-in-move-left__reverse {
+  animation: fade-in-move-left 1s reverse ease-in-out !important;
 }
