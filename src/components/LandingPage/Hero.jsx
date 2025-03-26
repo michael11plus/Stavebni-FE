@@ -46,13 +46,13 @@ const Hero = ({
         <Container ref={heroRef} className='hero section d-flex justify-content-center align-items-center flex-column' fluid>
             <Row className='p-0 base-width d-flex justify-content-center align-items-center'>
                 <Row className='p-0'>
-                    <Col ref={titleRef} className={`hero-title p-0 ${titleHit ? 'a--fade-in-move-right' : ''}`} xs={6}>
-                        Our goal is to deliver exceptional returns for our investors by executing high-quality flat renovation projects that enhance property value and appeal.
+                    <Col ref={titleRef} className={`hero-title p-0 pe-4 ${titleHit ? 'a--fade-in-move-right' : ''}`} xs={6}>
+                        Specializujeme se na poskytování kvalitních stavebních, malířských a úklidových služeb v Praze.     
                     </Col>
                 </Row>
                 <Row className='d-flex justify-content-end p-0 m-0'>
                     <Col ref={subtitleRef} className={`hero-subtitle p-0 ${subtitleHit ? 'a--fade-in-move-left' : ''}`} xs={4}>
-                        We work with local partners to renovate and revitalize properties in Prague, ensuring they meet modern standards while preserving their character.
+                    Klademe maximální důraz na spolehlivost, preciznost a cenovou dostupnost.
                     </Col>
                 </Row>
             </Row>

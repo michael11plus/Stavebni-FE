@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Card } from 'react-bootstrap';
+import { Container, Card, Row, Col } from 'react-bootstrap';
 import "../../styles/landing-page.css";
 import { servicesData } from '../../utils/mockupData';
 
@@ -56,11 +56,19 @@ const Services = ({
                         return;
                     else
                         return (
-                            <div key={service.id}>
-                                <Card className="service-card">
-                                    <img src={service.img} className='service-image'/>
-                                </Card>
-                                <p className="service-title mt-3">{service.title}</p>
+                            <div key={service.id} className='position-relative'>
+                                <div className='position-absolute'>
+                                    <Card className="service-card">
+                                        <img src={service.img} className='service-image'/>
+                                    </Card>
+                                    <p className="service-title mt-3">{service.title}</p>
+                                </div>
+                                <div>
+                                    <Card className="service-card">
+                                        <img src={service.img} className='service-image'/>
+                                    </Card>
+                                    <p className="service-title mt-3">Rodinného domu Rekonstrukce</p>
+                                </div>
                             </div>
                         )
                 })}
