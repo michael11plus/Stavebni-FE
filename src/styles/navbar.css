@@ -1,45 +1,45 @@
 .navbar {
-    background-color: transparent !important;
-    width: 100%;
-    position: fixed !important;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    padding: 16px 24px !important;
+	background-color: transparent !important;
+	width: 100%;
+	position: fixed !important;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	padding: 16px 24px !important;
 }
 
 .navbar--layer {
-    background: rgba(0, 0, 0, 0.35) !important;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
+	background: rgba(0, 0, 0, 0.35) !important;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px !important;
 }
 
 .navbar--black {
-    background-color: rgba(1, 1, 1, 0.9) !important;
-} 
+	background-color: rgba(1, 1, 1, 0.9) !important;
+}
 
 .navbar .navbar-brand,
 .navbar .nav-link {
-    color: white !important; /* Apply white color to text */
+	color: white !important; /* Apply white color to text */
 }
 
 .navbar-toggler {
-    border: none !important;
-    outline: none !important;
+	border: none !important;
+	outline: none !important;
 }
 
-.navbar-toggler:focus, 
+.navbar-toggler:focus,
 .navbar-toggler:active {
-    box-shadow: none !important;
+	box-shadow: none !important;
 }
 
 .nav-link {
-    margin-left: 30px !important;
+	margin-left: 30px !important;
 }
 
 .navbar .nav-link:hover {
-    color: #ddd !important; /* Slightly different color on hover */
+	color: #ddd !important; /* Slightly different color on hover */
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255, 255, 255, 1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
 }
